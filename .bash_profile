@@ -61,6 +61,7 @@ alias gpos="git push origin source"
 # Git aliases
 alias gp="git push"
 # alias gc="git commit -am"
+# Now that this file is reached via symlink in ~/, where do updates get saved?
 
 # GOROOT added manually by RTH on support Go on 6/22/2013
 export GOROOT=/usr/local/go

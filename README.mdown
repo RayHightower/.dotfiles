@@ -5,4 +5,4 @@ Configuration files used by Ray Hightower. Most of the ideas in these
 files were borrowed or learned from other developers. Thank you open
 source community!
 
-Some of these files are discussed at [RayHightower.com](http://rayhightower.com)
+Each dotfile in this directory is reached via symlink from the directory where one would normally look for it. The process is described in the  blog article [Managing Dotfiles]().
