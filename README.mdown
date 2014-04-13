@@ -3,6 +3,4 @@
 
 Configuration files used by Ray Hightower. Most of the ideas in these files were borrowed or learned from other developers. Thank you open source community!
 
-Let's add this sample line to see if Git can handle it :-)
-
 Each dotfile in this directory is reached via symlink from its original directory. Details are given in blog article [Managing Dotfiles](http://rayhightower.com/blog/2014/04/15/managing-dotfiles/).
