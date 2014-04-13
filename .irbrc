@@ -1,14 +1,10 @@
 # Found by RTH at http://www.snippetstash.com/public/127.txt on 3/12/2014
-# load libraries
 require 'rubygems'
 require 'wirble'
 
 # start wirble (with color)
-
 Wirble.init(:skip_prompt => true, :skip_history => true)
 Wirble.colorize
-
-
 
 def history(how_many = 50)
   history_size = Readline::HISTORY.size
@@ -87,5 +83,3 @@ if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
   # log SQL to the Rails console
   Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
 end
-
-
