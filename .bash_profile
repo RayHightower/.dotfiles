@@ -53,13 +53,9 @@ alias mmotion="mmotion.command" # alias added by RTH on 2/12/2013 to support Rub
 # source: http://coderwall.com/p/dtbuqg and http://robots.thoughtbot.com/post/27985816073/the-hitchhikers-guide-to-riding-a-mountain-lion
 export CC=/usr/local/bin/gcc-4.2
 
-# Aliases added 10/26/2013 by RTH to support Octopress, GitHub Pages, Jekyll, etc.
-alias rkg="rake generate"
-alias rkd="rake deploy"
-alias gpos="git push origin source"
-
 # Git aliases
 alias gp="git push"
+alias gpos="git push origin source" # for Octopress support
 
 # GOROOT added manually by RTH on support Go on 6/22/2013
 export GOROOT=/usr/local/go
