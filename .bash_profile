@@ -1,9 +1,10 @@
 # .bash_profile created by RTH on 8/10/2007, originally to add the "tree" command. To reload w/o launching a new shell: source ~/.bash_profile
 alias mytree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|-/'"
-
-alias rcamp="rake retina=3.5" # For RubyMotion demos at Chippewa Valley Code Camp 2013
-
 alias vs="mvim ~/Desktop/scratchpad/scratchpad.txt" # Open scratchpad.txt in Vim
+
+# for RubyMotion
+alias rcamp="rake retina=3.5" # For RubyMotion demos at Chippewa Valley Code Camp 2013
+alias mmotion="mmotion.command" # alias added by RTH on 2/12/2013 to support RubyMotion and ctags
 
 # PostgreSQL aliases suggested by @rob_dodson via his http://robdodson.me blog
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -16,8 +17,11 @@ export MANPATH="/usr/local/man:$MANPATH"
 export MANPATH="/usr/local/Cellar:$MANPATH"
 
 export PAGER="most" # Colorize man pages by RTH on 9/13/2012. To use most, must $ brew install most first!!!
-
 export EDITOR='/usr/local/bin/mvim' # Set EDITOR variable per PeepCode VIM screencast
+
+# Git aliases
+alias gp="git push"
+alias gpos="git push origin source" # for Octopress support
 
 # Show git branch within prompt, per Michael Hartl on 7/5/2011. Use multi-line prompt per Bryan Liles at WCR2012
 function parse_git_dirty {
@@ -29,9 +33,7 @@ function parse_git_branch {
 export PS1='\n\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 alias colortest="perl ~/Code/perl/colortest.pl -w -s" # perl colortest
-
 alias tm="tmuxinator" # tmuxinator 'cause I keep mispelling it!
-
 alias xcode="open *.xcodeproj" # for XCode support by RTH on 8/16/2012
 
 # alias added for directory stuff by RTH 9/10/2007 and updated thereafter
@@ -44,18 +46,11 @@ alias cdo="cd ~/Code/Objective-C"
 alias showdots="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 alias hidedots="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
-#aliases added by RTH for fun & experimental stuff
-alias droid="say -v cello droid"
-
-alias mmotion="mmotion.command" # alias added by RTH on 2/12/2013 to support RubyMotion and ctags
+alias droid="say -v cello droid" #aliases added by RTH for fun & experimental stuff
 
 # added manually by RTH to support gcc 4.2 and Ruby 1.8.7
 # source: http://coderwall.com/p/dtbuqg and http://robots.thoughtbot.com/post/27985816073/the-hitchhikers-guide-to-riding-a-mountain-lion
 export CC=/usr/local/bin/gcc-4.2
-
-# Git aliases
-alias gp="git push"
-alias gpos="git push origin source" # for Octopress support
 
 # GOROOT added manually by RTH on support Go on 6/22/2013
 export GOROOT=/usr/local/go
