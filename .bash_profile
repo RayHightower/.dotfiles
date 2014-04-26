@@ -3,7 +3,7 @@ alias mytree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e
 alias vs="mvim ~/Desktop/scratchpad/scratchpad.txt" # Open scratchpad.txt in Vim
 
 # for RubyMotion
-alias rcamp="rake retina=3.5" # For RubyMotion demos at Chippewa Valley Code Camp 2013
+alias rcamp="rake retina=3.5"
 alias mmotion="mmotion.command" # alias added by RTH on 2/12/2013 to support RubyMotion and ctags
 
 # PostgreSQL aliases suggested by @rob_dodson via his http://robdodson.me blog
