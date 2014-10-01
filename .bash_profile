@@ -23,6 +23,9 @@ export EDITOR='/usr/local/bin/mvim' # Set EDITOR variable per PeepCode VIM scree
 alias gp="git push"
 alias gpos="git push origin source" # for Octopress support
 
+# Path updated 9/8/2014 by RTH to support Homebrew after re-installing Mavericks
+# export PATH="/usr/local/bin:$PATH"
+
 # Show git branch within prompt, per Michael Hartl on 7/5/2011. Use multi-line prompt per Bryan Liles at WCR2012
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
