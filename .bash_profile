@@ -23,6 +23,11 @@ export EDITOR='/usr/local/bin/mvim' # Set EDITOR variable per PeepCode VIM scree
 alias gp="git push"
 alias gpos="git push origin source" # for Octopress support
 
+# For Octopress
+alias berp="bundle exec rake preview"
+alias berg="bundle exec rake generate"
+alias berd="bundle exec rake deploy"
+
 # Path updated 9/8/2014 by RTH to support Homebrew after re-installing Mavericks
 # export PATH="/usr/local/bin:$PATH"
 
