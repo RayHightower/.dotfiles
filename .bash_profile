@@ -8,6 +8,7 @@ alias mmotion="mmotion.command" # alias added by RTH on 2/12/2013 to support Rub
 
 # for Rails
 alias rdb="bundle exec rake db:migrate"
+alias rr="bundle exec rake routes"
 
 # PostgreSQL aliases suggested by @rob_dodson via his http://robdodson.me blog
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
