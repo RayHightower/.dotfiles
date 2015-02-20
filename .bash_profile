@@ -6,6 +6,9 @@ alias vs="mvim ~/Desktop/scratchpad/scratchpad.txt" # Open scratchpad.txt in Vim
 alias rcamp="rake retina=3.5"
 alias mmotion="mmotion.command" # alias added by RTH on 2/12/2013 to support RubyMotion and ctags
 
+# for Rails
+alias rdb="bundle exec rake db:migrate"
+
 # PostgreSQL aliases suggested by @rob_dodson via his http://robdodson.me blog
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
