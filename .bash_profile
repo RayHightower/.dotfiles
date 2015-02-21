@@ -26,6 +26,7 @@ export EDITOR='/usr/local/bin/mvim' # Set EDITOR variable per PeepCode VIM scree
 # Git aliases
 alias gp="git push"
 alias gpos="git push origin source" # for Octopress support
+alias gco="git checkout"
 
 # For Octopress
 alias berp="bundle exec rake preview"
