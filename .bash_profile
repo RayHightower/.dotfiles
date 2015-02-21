@@ -23,6 +23,10 @@ export MANPATH="/usr/local/Cellar:$MANPATH"
 export PAGER="most" # Colorize man pages by RTH on 9/13/2012. To use most, must $ brew install most first!!!
 export EDITOR='/usr/local/bin/mvim' # Set EDITOR variable per PeepCode VIM screencast
 
+# colorize ls in bash
+export LS_OPTS='--color=auto'
+alias ls="ls ${LS_OPTS}"
+
 # Git aliases
 alias gp="git push"
 alias gpos="git push origin source" # for Octopress support
