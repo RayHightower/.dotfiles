@@ -24,8 +24,8 @@ export PAGER="most" # Colorize man pages by RTH on 9/13/2012. To use most, must 
 export EDITOR='/usr/local/bin/mvim' # Set EDITOR variable per PeepCode VIM screencast
 
 # colorize ls in bash
-export LS_OPTS='--color=auto'
-alias ls="ls ${LS_OPTS}"
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Git aliases
 alias gp="git push"
