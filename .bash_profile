@@ -80,4 +80,7 @@ export GS_PROG=/usr/local/bin/gs # GS_PROG added manually by RTH to support Ghos
 export NODE_PATH="/usr/local/lib/node"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
+# Path for JRuby 9000 support. Manually set by RTH on 3/3/2015
+export PATH="/opt/jruby:$PATH"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
