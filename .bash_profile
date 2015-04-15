@@ -14,6 +14,9 @@ alias rr="bundle exec rake routes"
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
+# for rlwrap & scheme support. Details: http://rayhightower.com/blog/2015/03/19/using-rlwrap-with-mit-scheme-repl/
+alias sicp='rlwrap scheme'
+
 # path added by RTH. Did I clobber the original .bash_profile?
 export PATH="/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
