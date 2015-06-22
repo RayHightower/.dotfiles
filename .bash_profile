@@ -35,10 +35,11 @@ alias gp="git push"
 alias gpos="git push origin source" # for Octopress support
 alias gco="git checkout"
 
-# For Octopress
+# For Octopress and Jekyll
 alias berp="bundle exec rake preview"
 alias berg="bundle exec rake generate"
 alias berd="bundle exec rake deploy"
+alias jsw="jekyll serve -w"
 
 # Path updated 9/8/2014 by RTH to support Homebrew after re-installing Mavericks
 # export PATH="/usr/local/bin:$PATH"
@@ -70,7 +71,10 @@ alias droid="say -v cello droid" #aliases added by RTH for fun & experimental st
 
 # added manually by RTH to support gcc 4.2 and Ruby 1.8.7
 # source: http://coderwall.com/p/dtbuqg and http://robots.thoughtbot.com/post/27985816073/the-hitchhikers-guide-to-riding-a-mountain-lion
-export CC=/usr/local/bin/gcc-4.2
+# export CC=/usr/local/bin/gcc-4.2
+# for XCode, Swift, and Cradle
+export CC="/usr/bin/gcc"
+
 
 # GOROOT added manually by RTH on support Go on 6/22/2013
 export GOROOT=/usr/local/go
