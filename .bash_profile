@@ -62,8 +62,8 @@ alias tm="tmuxinator" # tmuxinator 'cause I keep mispelling it!
 alias xcode="open *.xcodeproj" # for XCode support by RTH on 8/16/2012
 
 # alias added for directory stuff by RTH 9/10/2007 and updated thereafter
-alias cdr="cd ~/Code/Ruby"
-alias cdra="cd ~/Code/Ruby/apps"
+alias cdr="cd ~/Dropbox/Code/Ruby"
+alias cdra="cd ~/Dropbox/Code/Ruby/apps"
 alias cdrm="cd ~/Code/Ruby/RubyMotion"
 alias cdo="cd ~/Code/Objective-C"
 
