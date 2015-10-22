@@ -39,10 +39,10 @@ alias gco="git checkout"
 alias berp="bundle exec rake preview"
 alias berg="bundle exec rake generate"
 alias berd="bundle exec rake deploy"
-alias js1="bundle exec jekyll serve -w --port 4001"
+alias js1="jekyll serve -w --port 4001"
 alias js2="bundle exec jekyll serve -w --port 4002"
 alias js3="bundle exec jekyll serve -w --port 4003"
-alias js4="bundle exec jekyll serve -w --port 4004"
+alias js4="jekyll serve -w --port 4004"
 alias jcc="compass compile" #compile CSS for Jekyll
 
 # Path updated 9/8/2014 by RTH to support Homebrew after re-installing Mavericks
