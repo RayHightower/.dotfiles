@@ -40,8 +40,8 @@ alias berp="bundle exec rake preview"
 alias berg="bundle exec rake generate"
 alias berd="bundle exec rake deploy"
 alias js1="jekyll serve -w --port 4001"
-alias js2="bundle exec jekyll serve -w --port 4002"
-alias js3="bundle exec jekyll serve -w --port 4003"
+alias js2="jekyll serve -w --port 4002"
+alias js3="jekyll serve -w --port 4003"
 alias js4="jekyll serve -w --port 4004"
 alias jcc="compass compile" #compile CSS for Jekyll
 
