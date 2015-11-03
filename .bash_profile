@@ -62,10 +62,10 @@ alias tm="tmuxinator" # tmuxinator 'cause I keep mispelling it!
 alias xcode="open *.xcodeproj" # for XCode support by RTH on 8/16/2012
 
 # alias added for directory stuff by RTH 9/10/2007 and updated thereafter
-alias cdr="cd ~/Dropbox/Code/Ruby"
-alias cdra="cd ~/Dropbox/Code/Ruby/apps"
-alias cdrm="cd ~/Dropbox/Code/Ruby/RubyMotion"
-alias cdo="cd ~/Dropbox/Code/Objective-C"
+alias cdr="cd ~/Code/Ruby"
+alias cdra="cd ~/Code/Ruby/apps"
+alias cdrm="cd ~/Code/Ruby/RubyMotion"
+alias cdo="cd ~/Code/Objective-C"
 
 # show & hide dotfiles in Finder added by RTH on 7/28/2012
 alias showdots="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
