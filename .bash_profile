@@ -35,16 +35,16 @@ alias gp="git push"
 alias gpos="git push origin source" # for Octopress support
 alias gco="git checkout"
 
-# For Octopress and Jekyll
+# For Octopress
 alias berp="bundle exec rake preview"
 alias berg="bundle exec rake generate"
 alias berd="bundle exec rake deploy"
-alias js1="jekyll serve -w --port 4001" # for Jekyll 2.4.0
-alias js31="bundle exec jekyll serve -w --port 4001" # This alias and below are for Jekyll 3.
+
+# For Jekyll
+alias js1="bundle exec jekyll serve -w --port 4001" # This alias and below are for Jekyll 3.
 alias js2="bundle exec jekyll serve -w --port 4002"
 alias js3="bundle exec jekyll serve -w --port 4003"
 alias js4="bundle exec jekyll serve -w --port 4004"
-alias jcc="compass compile" #for the Cactus theme, compile Sass into CSS for Jekyll
 
 # Path updated 9/8/2014 by RTH to support Homebrew after re-installing Mavericks
 # export PATH="/usr/local/bin:$PATH"
