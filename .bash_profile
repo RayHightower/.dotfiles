@@ -2,6 +2,9 @@
 alias mytree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|-/'"
 alias vs="mvim ~/Desktop/scratchpad/scratchpad.txt" # Open scratchpad.txt in Vim
 
+# Fix Finder's "Open With | Fetching..." issue
+alias fixfetching="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed -r -f -v -domain local -domain user -domain system"
+
 # for RubyMotion
 alias rcamp="rake retina=3.5"
 alias mmotion="mmotion.command" # alias added by RTH on 2/12/2013 to support RubyMotion and ctags
