@@ -54,7 +54,7 @@ alias js4="bundle exec jekyll serve -w --port 4004"
 
 # Show git branch within prompt, per Michael Hartl on 7/5/2011. Use multi-line prompt per Bryan Liles at WCR2012
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
@@ -67,8 +67,7 @@ alias xcode="open *.xcodeproj" # for XCode support by RTH on 8/16/2012
 
 # alias added for directory stuff by RTH 9/10/2007 and updated thereafter
 alias cdr="cd ~/Code/Ruby"
-alias cdra="cd ~/Code/Ruby/apps"
-alias cdrm="cd ~/Code/Ruby/RubyMotion"
+alias cdra="cd ~/Code/Ruby/"
 alias cdo="cd ~/Code/Objective-C"
 
 # show & hide dotfiles in Finder added by RTH on 7/28/2012
