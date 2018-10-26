@@ -84,15 +84,24 @@ export CC="/usr/bin/gcc"
 
 
 # GOROOT added manually by RTH on support Go on 6/22/2013
-export GOROOT=/usr/local/go
+# export GOROOT=/usr/local/go
+export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin
-export GOPATH=~/Code/gocode
+# export GOPATH=~/Code/gocode
+export GOPATH=~/Code/Go
+export PATH=$PATH:$GOPATH/bin
+
 
 export GS_PROG=/usr/local/bin/gs # GS_PROG added manually by RTH to support Ghostscript on 7/21/2013
 
 # Node.js paths entered manually by RTH to support Node.js on 8/20/2013
 export NODE_PATH="/usr/local/lib/node"
 export PATH="/usr/local/share/npm/bin:$PATH"
+
+# Java Version Switcher, from https://dzone.com/articles/switching-java-versions-on-mac-os
+alias j9="export JAVA_HOME=`/usr/libexec/java_home -v 9`; java -version"
+alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+# alias j7="export JAVA_HOME=`/usr/libexec/java_home -v 1.7`; java -version"
 
 # Path for JRuby 9000 support. Manually set by RTH on 3/3/2015
 export PATH="/opt/jruby/bin:$PATH"
