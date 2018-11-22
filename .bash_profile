@@ -69,6 +69,7 @@ alias xcode="open *.xcodeproj" # for XCode support by RTH on 8/16/2012
 alias cdr="cd ~/Code/Ruby"
 alias cdra="cd ~/Code/Ruby/"
 alias cdo="cd ~/Code/Objective-C"
+alias cdc="cd ~/Code/Clojure"
 
 # show & hide dotfiles in Finder added by RTH on 7/28/2012
 alias showdots="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
