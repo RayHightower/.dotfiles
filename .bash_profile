@@ -33,6 +33,9 @@ export EDITOR='/usr/local/bin/mvim' # Set EDITOR variable per PeepCode VIM scree
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# Add Visual Studio Code (code) [by RTH on 12/11/2020]
+# export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Git aliases
 alias gp="git push"
 alias gpos="git push origin source" # for Octopress support
@@ -85,9 +88,9 @@ export CC="/usr/bin/gcc"
 
 
 # GOROOT added manually by RTH on support Go on 6/22/2013
-# export GOROOT=/usr/local/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOROOT/bin
+export GOROOT=/usr/local/go/bin
+# export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT
 # export GOPATH=~/Code/gocode
 export GOPATH=~/Code/Go
 export PATH=$PATH:$GOPATH/bin
