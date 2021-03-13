@@ -14,3 +14,7 @@ if [ -d "/usr/local/opt/ruby/bin" ]; then
   export PATH=/usr/local/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
+
+# Added by RTH on 3/12/2021 to allow use of Homebrew's libffi instead of macOS ffi. Attempt to make rvm install ruby work.
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
