@@ -1,3 +1,6 @@
+#Timestamp each time .zhsrc is run
+echo "$(date) -- .zshrc executed" >> $HOME/.zshrc.log
+
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
