@@ -22,7 +22,8 @@ function parse_git_branch {
 NEWLINE=$'\n'
 # export PS1='${NEWLINE}%n:${PWD/#$HOME/~} $(parse_git_branch)$ '
 # export PROMPT='${NEWLINE}%n:${PWD/#$HOME/~} $(parse_git_branch)$ '
-export PROMPT='%n %~ $ '
+# export PROMPT='%n %~ $ '
+export PROMPT="${NEWLINE}%n %~ $(parse_git_branch) $ "
 
 # colorize ls in zsh (taken from RTH's bash script)
 export CLICOLOR=1
