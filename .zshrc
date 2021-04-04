@@ -22,6 +22,7 @@ function parse_git_branch {
 # export PS1=$'\n\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 NEWLINE=$'\n'
 export PROMPT="${NEWLINE}%n %~ $(parse_git_branch) $ "
+# random line to test clean vs dirty repo
 
 # colorize ls in zsh (taken from RTH's bash script)
 export CLICOLOR=1
