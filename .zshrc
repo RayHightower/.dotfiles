@@ -60,6 +60,9 @@ alias cdc="cd ~/Code/Clojure"
 
 # Show git branch in prompt, per https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29
 # with NEWLINE and color modifications by RTH, 2/17/2022
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
+}
 function parse_git_branch() {
     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 }
@@ -70,4 +73,4 @@ COLOR_DIR=$'\e[38;5;48m'
 COLOR_GIT=$'\e[38;5;39m'
 NEWLINE=$'\n'
 setopt PROMPT_SUBST
-export PROMPT='${NEWLINE}${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
+export PROMPT='${NEWLINE}${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)$(parse_git_dirty)${COLOR_DEF} $ '
