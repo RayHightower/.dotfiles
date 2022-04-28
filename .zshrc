@@ -35,6 +35,7 @@ alias xcode="open *.xcodeproj" # for XCode support by RTH on 8/16/2012
 # alias added for directory stuff by RTH 9/10/2007 and updated thereafter
 alias cdr="cd ~/Code/Ruby"
 alias cdra="cd ~/Code/Ruby/"
+alias cdrh="cd ~/Code/Ruby/RayHightower.com"
 alias cdo="cd ~/Code/Objective-C"
 alias cdc="cd ~/Code/Clojure"
 
