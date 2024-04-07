@@ -53,9 +53,12 @@ COLOR_USR=$'%F{243}'
 COLOR_DIR=$'%F{197}'
 COLOR_GIT=$'%F{39}'
 setopt PROMPT_SUBST
-export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
+export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)$(parse_git_dirty)${COLOR_DEF} $ '
 
 # REMOVED by RTH to address formatting problems in iterm. 4/7/2024.
+# Color codes given below were for bash, not zsh. Switched to zsh color codes per this gist:
+# https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29?permalink_comment_id=4409650#gistcomment-4409650
+#
 # function parse_git_branch() {
 #     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 # }
