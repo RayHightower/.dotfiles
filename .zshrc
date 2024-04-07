@@ -43,7 +43,7 @@ alias cdc="cd ~/Code/Clojure"
 # with NEWLINE and color modifications by RTH, 2/17/2022
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "**"
-  [[ $(git status 2> /dev/null | tail -n1) != "fatal: not a git repository (or any of the parent directories): .git" ]] && echo "no-git"
+  [[ $(git status 2> /dev/null | tail -n1) == "fatal: not a git repository (or any of the parent directories): .git" ]] && echo "no-git"
 }
 function parse_git_branch() {
     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
