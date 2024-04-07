@@ -52,7 +52,6 @@ COLOR_DEF=$'%f'
 COLOR_USR=$'%F{243}'
 COLOR_DIR=$'%F{197}'
 COLOR_GIT=$'%F{39}'
-NEWLINE=$'\n'
 setopt PROMPT_SUBST
 export PROMPT='${NEWLINE}${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)$(parse_git_dirty)${COLOR_DEF} $ '
 
