@@ -39,6 +39,12 @@ alias cdrh="cd ~/Code/Ruby/RayHightower.com"
 alias cdo="cd ~/Code/Objective-C"
 alias cdc="cd ~/Code/Clojure"
 
+# show & hide dotfiles in Finder added by RTH on 7/28/2012
+alias showdots="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+alias hidedots="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+
+alias droid="say -v cello droid" #aliases added by RTH for fun & experimental stuff
+
 # Show git branch in prompt, per https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29
 # with NEWLINE and color modifications by RTH, 2/17/2022
 function parse_git_dirty {
