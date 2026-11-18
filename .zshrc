@@ -79,16 +79,16 @@ export PROMPT='${NEWLINE}${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_b
 # export PROMPT='${NEWLINE}${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)$(parse_git_dirty)${COLOR_DEF} $ '
 
 # Add ROIClear logo (top-right, reasonably small) to a video
-# Usage: add_roiclear_logo input.mov output.mov
-add_roiclear_logo() {
-  if [[ $# -ne 2 ]]; then
-    echo "Usage: add_roiclear_logo input_file output_file"
+# Usage: addlogo input.mov
+# Output will be named input_ROIClear_logo.mov
+addlogo() {
+  if [[ $# -ne 1 ]]; then
+    echo "Usage: addlogo input_file"
     return 1
   fi
 
   local input="$1"
-  local output="$2"
-  local logo="ROIClear_logo_transparent.png"   # ← change this path if needed
+  local logo="$HOME/ROIClear_logo_transparent.jpg"   # ← change this path if needed
 
   if [[ ! -f "$input" ]]; then
     echo "Error: input file not found: $input"
@@ -101,7 +101,20 @@ add_roiclear_logo() {
     return 1
   fi
 
+  # Build output filename: insert _ROIClear_logo before the extension
+  local dir="${input:h}"
+  local base="${input:t}"
+  local name="${base%.*}"
+  local ext="${base##*.}"
+  local output="${dir}/${name}_ROIClear_logo.${ext}"
+
   ffmpeg -i "$input" -i "$logo" \
     -filter_complex "[1:v]scale=iw*0.15:-1[logo];[0:v][logo]overlay=W-w-30:30" \
-    -c:a copy "$output"
+    -c:v libx264 -preset medium -crf 18 \
+    -c:a aac -b:a 192k \
+    -movflags +faststart \
+    -pix_fmt yuv420p \
+    "$output"
+
+  echo "Done → $output"
 }
