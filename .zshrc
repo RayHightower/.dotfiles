@@ -88,7 +88,7 @@ addlogo() {
   fi
 
   local input="$1"
-  local logo="$HOME/ROIClear_logo_transparent.jpg"   # ← change this path if needed
+  local logo="$HOME/ROIClear_logo_transparent.png"   # ← change this path if needed
 
   if [[ ! -f "$input" ]]; then
     echo "Error: input file not found: $input"
