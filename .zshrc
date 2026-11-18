@@ -101,12 +101,12 @@ addlogo() {
     return 1
   fi
 
-  # Build output filename: insert _ROIClear_logo before the extension
+  # Build output filename: insert _logo before the extension
   local dir="${input:h}"
   local base="${input:t}"
   local name="${base%.*}"
   local ext="${base##*.}"
-  local output="${dir}/${name}_ROIClear_logo.${ext}"
+  local output="${dir}/${name}_logo.${ext}"
 
   ffmpeg -i "$input" -i "$logo" \
     -filter_complex "[1:v]scale=iw*0.15:-1[logo];[0:v][logo]overlay=W-w-30:30" \
