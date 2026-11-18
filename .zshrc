@@ -77,3 +77,31 @@ export PROMPT='${NEWLINE}${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_b
 # NEWLINE=$'\n'
 # setopt PROMPT_SUBST
 # export PROMPT='${NEWLINE}${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)$(parse_git_dirty)${COLOR_DEF} $ '
+
+# Add ROIClear logo (top-right, reasonably small) to a video
+# Usage: add_roiclear_logo input.mov output.mov
+add_roiclear_logo() {
+  if [[ $# -ne 2 ]]; then
+    echo "Usage: add_roiclear_logo input_file output_file"
+    return 1
+  fi
+
+  local input="$1"
+  local output="$2"
+  local logo="$HOME/ROIClear_logo_transparent.jpg"   # ← change this path if needed
+
+  if [[ ! -f "$input" ]]; then
+    echo "Error: input file not found: $input"
+    return 1
+  fi
+
+  if [[ ! -f "$logo" ]]; then
+    echo "Error: logo file not found: $logo"
+    echo "Place the transparent logo at that path (or edit the function)."
+    return 1
+  fi
+
+  ffmpeg -i "$input" -i "$logo" \
+    -filter_complex "[1:v]scale=iw*0.15:-1[logo];[0:v][logo]overlay=W-w-30:30" \
+    -c:a copy "$output"
+}
